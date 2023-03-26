@@ -24,7 +24,7 @@ namespace WebApis.Controllers
         }
 
         [Produces("application/json")]
-        [HttpPost("/api/GetOne")]
+        [HttpPost("/api/GetOne/{id}")]
         public Produto GetOne(int id)
         {
             return _IProduto.GetOne(id);
@@ -65,7 +65,7 @@ namespace WebApis.Controllers
         }
 
         [Produces("application/json")]
-        [HttpPost("/api/DeleteProd")]
+        [HttpPost("/api/DeleteProd/{id}")]
         public bool DeleteProd(int id)
         {
             try
