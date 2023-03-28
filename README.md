@@ -1,4 +1,4 @@
-![logo_ProjTestes](Images/Img1.jpg)
+<!-- ![logo_ProjTestes](Images/Img1.jpg) -->
 
 <hr>
 
@@ -10,54 +10,78 @@
 
 - [Descrição do projeto](#descrição-do-projeto)
 
-- [Funcionalidades](#funcionalidades)
+- [Implantação](#implantação)
+
+- [Test end points](#test-end-points)
 
 - [Ferramentas utilizadas](#ferramentas-utilizadas)
-
-- [Acesso ao projeto](#acesso-ao-projeto)
-
-- [Abrir e rodar o projeto](#abrir-e-rodar-o-projeto)
 
 ## Descrição do projeto 
 
 <p align="justify">
-Este projeto foi desenvolvido ...
+Esta API foi desenvolvida para consumir a 
+<a href="https://github.com/medinasp/APIsourceAPI">APIsourceAPI</a>
 
-* ...
-* ...
+Seu conteúdo é composto apenas das 4 funcionalidades CRUD, sem controle de acesso, com banco de dados Sql Server.
 </p>
 <br>
 
-## Funcionalidades
+## Implantação
 <div style="width:100%">
 
-`Tela de Abertura:`
-![Tela de abertura](Images/abertura.jpg)
 
-`Tela de Registro de Contas:`
-   ![Tela de registro](Images/register.jpg)
+`Preparação:`
+<!-- ![Tela de abertura](Images/abertura.jpg) -->
+* Primeiro clone, prepare e execute a <a href="https://github.com/medinasp/APIsourceAPI">APIsourceAPI</a> que será consumida por esta.
 
+* Clone o repositório desta <a href="https://github.com/medinasp/APItoAPI">APItoAPI</a>, abra a solução no Visual Studio ou em alguma IDE de sua preferência e execute.
+
+`Execução:`
+   * Com os 2 projetos rodando, abra o testador de sua preferência e execute os endpoints:
+
+      ✅ `Create:`
+      * Exemplo de json para end point "Create":<br>
+         Post: https://localhost:7100/api/CreateProd<br>
+         Json Content:<br>
+            {<br>
+               "Descricao":"Registro 9",<br>
+            }<br><br>
+
+      ✅ `List:`
+      * Exemplo de json para end point "List":<br>
+         Post: https://localhost:7100/api/ListProd<br>
+         Json Content:<br>
+            {<br>
+               "codigo": 0,<br>
+               "descricao": "",<br>
+               "dataCriacao": "",<br>
+               "dataAtualizacao": ""<br>
+            }<br><br>
+
+      ✅ `Update:`
+      * Exemplo de json para end point "Update":<br>
+         Post: https://localhost:7100/api/UpdateProd<br>
+         Json Content:<br>
+            {<br>
+               "codigo": 1002,<br>
+               "descricao": "Updated Register" <br>
+            }<br><br>
+
+      ✅ `GetOne`
+      * Exemplo de json para end point "GetOne":<br>
+         Post: https://localhost:7100/api/GetOne/1004<br>
+         Json Content:<br>
+            não é necessário json, basta passar o código na url, como no exemplo, código 1004<br><br>
+
+      ✅ `Delete`
+      * Exemplo de json para end point "Delete":<br>
+         Post: https://localhost:7100/api/DeleteProd/1004<br>
+         Json Content:<br>
+            não é necessário json, basta passar o código na url, como no exemplo, código 1004<br>
 </div>   
 </br>
-
-✅ `Funcionalidade 1:` Realizar cadastro ...
-
-✅ `Funcionalidade 2:` Gerador de token ...
-
-✅ `Funcionalidade 3:` Endpoints para listar, ...
-
-✅ `Funcionalidade 4:` Testes nos endpoints ...
-
-<br>
 
 ## Ferramentas utilizadas
 
 <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/></a>
 <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg" alt="dotnet" width="40" height="40"/></a>
-<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/>
-
-## Acesso ao projeto
-Você pode [acessar o código fonte do projeto ou baixá-lo](https://github.com/medinasp/TestesApi) </br></br>
-
-## Abrir e rodar o projeto
-Após baixar o projeto, você pode e abri-lo e trabalhar com `Visual Studio`.
